@@ -1,0 +1,275 @@
+html {
+  height: 3200px;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+}
+
+div.index-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+div.noticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  width: 100%;
+  background-image: url("../src/static/images/banners/notice.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.noticia h1 {
+  font-size: 40px;
+  font-weight: 100;
+  margin: 30px;
+  color: var(--grey-ligth);
+}
+div.noticia h2 {
+  font-size: 28px;
+  color: var(--grey-ligth);
+}
+div.noticia button {
+  width: 200px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px;
+  font-size: 24px;
+  padding: 10px;
+  color: var(--brown-dark);
+}
+div.noticia button:hover {
+  cursor: pointer;
+  background-color: var(--brown-dark);
+  color: var(--grey-ligth);
+}
+
+/* CSS DEL CONTENEDOR PRINCIPAL DE LAS CATEGORIAS DE PRODUCTOS EN EL INDEX*/
+
+div.categorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-height: 10%;
+  height: fit-content;
+  width: 100%;
+}
+
+/* CSS DEL CONTENEDOR DE LOS TITULOS DE LA SECCION CATEGORIAS  */
+
+div.categorias div.titulo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* CSS DEL TITULO Y SUBTITULO DE LA SECCION CATEGORIAS */
+
+div.categorias div.titulo h2 {
+  font-size: 24px;
+  margin: 10px;
+  color: var(--grey-dark);
+}
+
+div.categorias div.titulo h1 {
+  font-size: 24px;
+  margin: 10px;
+  color: black;
+}
+
+/* CSS DEL CONTENEDOR DE TODAS LAS CATEGORIAS ABAJO DEL TITULO */
+
+div.categorias-container {
+  display: flex;
+  width: 80%;
+}
+
+/* CSS DEL LA LISTA DE CATEGORIAS  */
+
+div.categorias-container ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 80%;
+  width: 100%;
+}
+
+div.categorias-container ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  height: 300px;
+  border-radius: 3px;
+  border: 1px;
+  width: 250px;
+  background-color: white;
+}
+
+/* CSS DE LA IMAGEN DE LA CATEGORIA  */
+
+div.categorias-container ul li img {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+/* CSS DEL BOTON DE LA CATEGORIA  */
+
+div.categorias-container ul li a {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-top: 2px solid var(--grey-ligth);
+  color: var(--grey-dark);
+  text-decoration: none;
+}
+
+div.categorias-container ul li a:hover {
+  color: var(--brown-dark);
+}
+
+/* CSS DEL CONTENEDOR DE LAS OFERTAS AL POR MAYOR  */
+
+div.mayorista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  width: 100%;
+  background-image: url("../src/static/images/banners/mayorista.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.mayorista h1 {
+  width: 70%;
+  font-size: 40px;
+  font-weight: 100;
+  margin: 20px;
+  color: var(--grey-ligth);
+}
+div.mayorista h2 {
+  width: 70%;
+  margin: 20px;
+  font-size: 28px;
+  color: var(--grey-ligth);
+}
+div.mayorista button {
+  width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 3px;
+  border: 1px;
+  color: var(--brown-dark);
+}
+
+div.mayorista button:hover {
+  cursor: pointer;
+  background-color: var(--brown-dark);
+  color: var(--grey-ligth);
+}
+
+/* CSS DEL CONTENEDOR PRINCIPAL DE LAS CATEGORIAS DE PRODUCTOS EN EL INDEX*/
+
+div.mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 25%;
+  width: 100%;
+}
+
+/* CSS DEL CONTENEDOR DE LOS TITULOS DE LA SECCION CATEGORIAS  */
+
+div.mapa div.titulo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* CSS DEL TITULO Y SUBTITULO DE LA SECCION CATEGORIAS */
+
+div.mapa div.titulo h2 {
+  font-size: 24px;
+  margin: 10px;
+  color: var(--grey-dark);
+}
+
+div.mapa div.titulo h1 {
+  font-size: 24px;
+  margin: 10px;
+  color: black;
+}
+
+/* CSS DEL CONTENEDOR DE TODAS LAS CATEGORIAS ABAJO DEL TITULO */
+
+div.mapa-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+  background-image: url("../src/static/images/banners/mapa.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.mapa-container h1 {
+  width: 60%;
+  font-size: 40px;
+  font-weight: lighter;
+  margin: 30px;
+  color: var(--grey-ligth);
+}
+div.mapa-container h2 {
+  width: 60%;
+  font-size: 28px;
+  color: var(--grey-ligth);
+}
+div.mapa-container button {
+  width: 200px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px;
+  margin: 30px;
+  font-size: 24px;
+  padding: 10px;
+  color: var(--brown-dark);
+}
+div.mapa-container button:hover {
+  cursor: pointer;
+  background-color: var(--brown-dark);
+  color: var(--grey-ligth);
+}

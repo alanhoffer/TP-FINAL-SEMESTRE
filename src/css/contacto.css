@@ -1,0 +1,182 @@
+html {
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background-color: #f2f2f2;
+}
+div.contacto-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+
+div.contacto-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+div.contacto-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: var(--brown-dark);
+}
+
+div.contacto-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+}
+
+
+div.contacto-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35%;
+    width: 80%;
+    background-color: var(--brown-dark);
+}
+
+div.contacto-title h1{
+    margin-bottom: 25px;
+    font-size:34px;
+    color: var(--grey-ligth);
+}
+div.contacto-title h2{
+    width: 80%;
+    margin-bottom: 25px;
+    font-size:24px;
+    font-weight: lighter;
+    color: var(--grey-ligth);
+}
+
+div.contacto-info{
+    display: flex;
+    flex-direction: column;
+    height: 55%;
+    width: 80%;
+}
+
+div.contacto-info h3{
+    margin-bottom: 25px;
+    font-size:24px;
+    font-weight: lighter;
+    color: var(--grey-ligth);
+
+}
+
+div.contacto-info p{
+    margin-bottom: 25px;
+    font-size:18px;
+    font-weight: lighter;
+    color: var(--grey-ligth);
+}
+
+
+div.contacto-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10%;
+    width: 80%;
+}
+
+div.contacto-social ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+div.contacto-social ul li{
+    margin-right: 25px;
+    height: 100%;
+    font-size: 34px;
+}
+
+div.contacto-social ul li a{
+    color: var(--grey-ligth);
+}
+
+div.contacto-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+}
+
+div.contacto-form h1{
+    height: 10%;
+    margin-bottom: 25px;
+    font-size:34px;
+    font-weight: lighter;
+    color: var(--brown-dark);
+}
+
+div.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    width: 100%;
+}
+
+div.contacto-form form input{
+    margin-bottom: 25px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: lighter;
+    background-color: var(--grey);
+    border:none;
+    color: black;
+
+}
+
+div.contacto-form form textarea{
+    margin-bottom: 25px;
+    height: 100px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: lighter;
+    background-color: var(--grey);
+    color: black;
+    border:none;
+    resize: none;
+}
+div.contacto-form h2{
+    font-size:18px;
+    font-weight: lighter;
+    color: var(--brown-dark);
+
+}
+
+#enviar{
+    background-color: var(--brown-dark);
+    color: white;
+    font-weight: lighter;
+}
+

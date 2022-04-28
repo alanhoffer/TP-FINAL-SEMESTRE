@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Almacen</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./src/css/escencial.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/productos.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/footer.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="navbar-content">
+        <div class="navbar-logo">
+          <a href="index.html">
+            <h1 class="logo">
+              Alma
+              <h1 class="logo-sub">cen</h1>
+            </h1>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a class="selected" href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li>
+              <a href="#"><ion-icon name="cart" id="btncart"> </ion-icon></a>
+            </li>
+          </ul>
+          <div class="cart" id="cart">
+            <div class="title">Tus Compras</div>
+            <div class="cartproducts" id="cartproducts"></div>
+            <div class="buyall"><button id="buyall">Comprar</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="productos-container">
+      <div class="noticia">
+        <h2>Compra productos naturales</h2>
+        <h1>50% de descuento en cereales</h1>
+      </div>
+      <div class="categories">
+        <div class="category-item selected"><button>Todos</button></div>
+        <div class="category-item"><button>Harinas</button></div>
+        <div class="category-item"><button>Frutas</button></div>
+        <div class="category-item"><button>Verduras</button></div>
+        <div class="category-item"><button>Legumbres</button></div>
+      </div>
+      <div class="productlist-container">
+        <div class="products-list" id="productslist">
+          <div class="product-item" id="productsitem">
+            <div class="productinfo-container">
+              <div class="product-image">
+                <img src="./src/static/images/products/harinas.jpg" alt="" />
+              </div>
+              <div class="product-info">
+                <h3>Harina de trigo</h3>
+                <p>$10.00</p>
+              </div>
+              <div class="product-add">
+                <button>Agregar</button>
+              </div>
+            </div>
+            <div class="product-quantity">
+              <button>-</button>
+              <p>1</p>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="index.html">
+          <h1 class="logo">
+            Alma
+            <h1 class="logo-sub">cen</h1>
+          </h1>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="./src/static/scripts/products.ts" />
+</html>
