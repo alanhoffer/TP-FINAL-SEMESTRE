@@ -84,7 +84,7 @@ div.category-item.selected button {
 
 div.productlist-container {
   display: flex;
-  height: 100%;
+  height: 120%;
   width: 80%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -215,18 +215,25 @@ div.product-item:hover div.product-quantity {
   }
 }
 
-div.product-quantity p {
+div.product-quantity input {
+  border: 0;
+  width: 30px;
+  height: 50%;
   font-size: 18px;
+  text-align: center;
   font-weight: lighter;
   color: var(--grey-ligth);
-  padding-left: 10px;
-  padding-right: 10px;
+  background-color: var(--brown-dark);
+}
+
+div.product-quantity input:focus {
+  outline: none;
 }
 
 div.product-quantity button {
+  border: 0px;
   font-size: 24px;
   font-weight: lighter;
-  border: 1px;
   background-color: var(--brown-dark);
   color: var(--grey-ligth);
   padding-left: 10px;
@@ -310,4 +317,26 @@ div.buyall button {
   color: white;
   border: none;
   border-radius: 3px;
+}
+
+div.exitbuy {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 35%;
+  width: 30%;
+  height: 15%;
+  background-color: white;
+}
+
+div.exitbuy-show {
+  display: flex;
+}
+
+div.contenedor-show {
+  filter: blur(2px);
 }

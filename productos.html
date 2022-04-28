@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div class="productos-container">
+    <div class="productos-container" id="productos-container">
       <div class="noticia">
         <h2>Compra productos naturales</h2>
         <h1>50% de descuento en cereales</h1>
@@ -61,27 +61,7 @@
         <div class="category-item"><button>Legumbres</button></div>
       </div>
       <div class="productlist-container">
-        <div class="products-list" id="productslist">
-          <div class="product-item" id="productsitem">
-            <div class="productinfo-container">
-              <div class="product-image">
-                <img src="./src/static/images/products/harinas.jpg" alt="" />
-              </div>
-              <div class="product-info">
-                <h3>Harina de trigo</h3>
-                <p>$10.00</p>
-              </div>
-              <div class="product-add">
-                <button>Agregar</button>
-              </div>
-            </div>
-            <div class="product-quantity">
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
-            </div>
-          </div>
-        </div>
+        <div class="products-list" id="productslist"></div>
       </div>
       <div class="footer">
         <a href="index.html">
@@ -91,6 +71,10 @@
           </h1>
         </a>
       </div>
+    </div>
+    <div class="exitbuy" id="exitbuy">
+      <h2 id="exitbuy-text">Ha comprado de forma exitosa</h2>
+      <button id="exitbuy-button">OK</button>
     </div>
   </body>
   <script src="./src/static/scripts/products.ts" />

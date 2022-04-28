@@ -57,12 +57,21 @@ function showCart() {
   getCart();
 }
 
-function addToCart(id: number) {
+function addToCart(id: number, cantidad: number) {
+  // le asigno la informacion del prudcto que clickie a un array
+
   let array: string[] = productList[id];
-  if (Number(productList[id][3]) < 1) {
+  // chequeo si la cantidad de stock en productlist es menor a la cantidad que quiero comprar
+  if (Number(productList[id][3]) < cantidad) {
     alert("No hay stock de este producto");
   } else {
-    productList[id][3] = String(Number(productList[id][3]) - 1);
+    // si ta todo okey resto la cantidad al stock
+    productList[id][3] = String(Number(productList[id][3]) - cantidad);
+    // luego multiplico el precio que tengo en el array x la cantidad
+    array[2] = String(Number(array[2]) * cantidad);
+    // luego le asigno el nombre xcantidad
+    array[1] = array[1] + "x" + cantidad;
+    // paso el array a la matriz del carrito
     cartList.push(array);
   }
 }
@@ -80,7 +89,7 @@ function getProducts() {
     const button = document.createElement("button");
     const productquantity = document.createElement("div");
     const buttonmenos = document.createElement("button");
-    const numeroacomprar = document.createElement("p");
+    const numeroacomprar = document.createElement("input");
     const buttonmas = document.createElement("button");
 
     product.classList.add("product-item");
@@ -98,23 +107,42 @@ function getProducts() {
     productinfocontainer.appendChild(productinfo);
 
     prod_name.textContent = productList[i][1];
-    prod_price.textContent = productList[i][2];
+    prod_price.textContent = "$" + productList[i][2];
     productinfo.appendChild(prod_name);
     productinfo.appendChild(prod_price);
 
     productinfocontainer.appendChild(productadd);
 
     button.textContent = "Agregar";
+    button.setAttribute("id", i);
 
-    button.addEventListener("click", () => addToCart(i));
+    button.addEventListener("click", (e) => {
+      let cantidad = document.getElementById("cantidad" + e.target.id);
+      addToCart(e.target.id, cantidad.value);
+    });
 
     productadd.appendChild(button);
 
     buttonmenos.textContent = "-";
-    numeroacomprar.textContent = "1";
+    numeroacomprar.setAttribute("value", "1");
+    numeroacomprar.setAttribute("id", "cantidad" + i);
     buttonmas.textContent = "+";
-    buttonmenos.addEventListener("click", () => restarcantidad());
-    buttonmas.addEventListener("click", () => sumarcantidad());
+
+    buttonmas.setAttribute("id", i);
+    buttonmenos.setAttribute("id", i);
+    buttonmas.addEventListener("click", (e) => {
+      let cantidad = document.getElementById("cantidad" + e.target.id);
+      cantidad?.setAttribute("value", Number(cantidad.value) + 1);
+      console.log(cantidad.value);
+    });
+
+    buttonmenos.addEventListener("click", (e) => {
+      let cantidad = document.getElementById("cantidad" + e.target.id);
+      if (cantidad.value > 1) {
+        cantidad?.setAttribute("value", Number(cantidad.value) - 1);
+      }
+      console.log(cantidad.value);
+    });
 
     productquantity.appendChild(buttonmenos);
     productquantity.appendChild(numeroacomprar);
@@ -127,6 +155,13 @@ function getProducts() {
   }
 }
 
+function exitbuy() {
+  let contenedor = document.getElementById("productos-container");
+  contenedor?.classList.toggle("contenedor-show");
+  let exit_buy = document.getElementById("exitbuy");
+  exit_buy?.classList.toggle("exitbuy-show");
+}
+
 function buyAll() {
   let final_price: number = 0;
   if (cartList.length < 1) {
@@ -135,7 +170,12 @@ function buyAll() {
     for (let i: number = 0; i <= cartList.length - 1; i++) {
       final_price = final_price + Number(cartList[i][2]);
     }
-    alert("Compra exitosa, Has pagado $" + final_price);
+    let exitbuy_text = document.getElementById("exitbuy-text");
+    let exitbuy_button = document.getElementById("exitbuy-button");
+
+    exitbuy_text?.textContent = "Compra exitosa, Has pagado $" + final_price;
+    exitbuy_button?.addEventListener("click", exitbuy);
+    exitbuy();
     cartList = [];
   }
 }
