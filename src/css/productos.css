@@ -247,6 +247,7 @@ div.cart {
   position: absolute;
   max-height: 400px;
   width: 300px;
+  border-radius: 3px;
   top: 8%;
   right: 10%;
   background-color: white;
@@ -301,6 +302,12 @@ h2 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
+div.cartproduct div.cartdescription h1 {
+  color: var(--grey-dark);
+}
+div.cartproduct div.cartdescription h2 {
+  color: var(--brown-dark);
+}
 
 div.buyall {
   height: 10%;
@@ -312,7 +319,9 @@ div.buyall {
 div.buyall button {
   margin-top: 10px;
   text-decoration: none;
-  padding: 10px;
+  padding: 8px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: var(--brown-dark);
   color: white;
   border: none;
