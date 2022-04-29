@@ -5,17 +5,118 @@ let cartproducts = document.getElementById("cartproducts");
 let btnbuyall = document.getElementById("buyall");
 
 let productList: string[][] = [
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199.50", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "139.25", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "129", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "39", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "49.50", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199", "3"],
-  ["./src/static/images/products/frutas.jpg", "Kiwi", "199", "3"]
+  ["./src/static/images/products/frutas/anana.jpg", "Anana", "50.50", "10"],
+  ["./src/static/images/products/frutas/kiwi.jpg", "Kiwi", "33.50", "20"],
+  ["./src/static/images/products/frutas/pera.jpg", "Pera", "22.50", "30"],
+  ["./src/static/images/products/frutas/sandia.png", "Sandia", "120.50", "5"],
+  ["./src/static/images/products/frutas/naranja.png", "Naranja", "50.50", "50"],
+
+  [
+    "./src/static/images/products/harinas/harinapan.jpg",
+    "Harina Panificable",
+    "500.10",
+    "50"
+  ],
+  [
+    "./src/static/images/products/harinas/harinaflorencia.jpg",
+    "Harina Florencia",
+    "315.10",
+    "50"
+  ],
+  [
+    "./src/static/images/products/harinas/harinanevisca.jpg",
+    "Harina Nevisca",
+    "238.10",
+    "50"
+  ],
+  [
+    "./src/static/images/products/harinas/harinacierzo.jpg",
+    "Harina Cierzo",
+    "200.10",
+    "50"
+  ],
+
+  [
+    "./src/static/images/products/legumbres/frijolesblancos.jpg",
+    "Frijoles Blancos",
+    "25.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/frijolesnegros.jpg",
+    "Frijoles Negros",
+    "25.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/frijolesrojos.jpg",
+    "Frijoles Rojos",
+    "30.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/garbanzos.jpg",
+    "Garbanzos",
+    "20.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/guisantesblancos.jpg",
+    "Guisantes Blancos",
+    "15.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/guisantesverdes.jpg",
+    "Guisantes Verdes",
+    "15.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/lentejasnegras.jpg",
+    "Lentejas Negras",
+    "28.30",
+    "100"
+  ],
+  [
+    "./src/static/images/products/legumbres/lentejasrojas.jpg",
+    "Lentejas Rojas",
+    "28.30",
+    "100"
+  ],
+
+  ["./src/static/images/products/verduras/apio.jpg", "Apio", "10.30", "25"],
+  [
+    "./src/static/images/products/verduras/berenjena.png",
+    "Berenjena",
+    "70.30",
+    "25"
+  ],
+  [
+    "./src/static/images/products/verduras/brocoli.jpg",
+    "Brocoli",
+    "60.30",
+    "25"
+  ],
+  [
+    "./src/static/images/products/verduras/cebolla.jpg",
+    "Cebolla",
+    "20.30",
+    "25"
+  ],
+  ["./src/static/images/products/verduras/papa.jpg", "Papa", "30.30", "25"],
+  [
+    "./src/static/images/products/verduras/tomate.jpg",
+    "Tomate",
+    "100.30",
+    "25"
+  ],
+  [
+    "./src/static/images/products/verduras/zanahoria.jpg",
+    "Zanahoria",
+    "120.30",
+    "25"
+  ]
 ];
 
 let cartList: string[][] = [];
